@@ -48,16 +48,20 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.leyou.item</groupId>
+            <groupId>org.example</groupId>
+            <artifactId>leyou-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <artifactId>leyou-item-interface</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <groupId>org.example</groupId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <!-- springboot检测服务启动器 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-
     </dependencies>
 
 </project>
