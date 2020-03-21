@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Locale;
 
 @RestController
 @RequestMapping("/category")
@@ -20,7 +19,7 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
-    @GetMapping("/list")
+    @GetMapping("/of/parent")
     public ResponseEntity<List<Category>> queryCategoryByPId(@RequestParam(value = "pid") Long pid) {
         if (pid.longValue() < 0 || pid == null) {
             return ResponseEntity.badRequest().build();

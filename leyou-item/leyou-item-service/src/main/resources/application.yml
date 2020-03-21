@@ -17,3 +17,10 @@ eureka:
   instance:
     lease-expiration-duration-in-seconds: 10
     lease-renewal-interval-in-seconds: 5
+mybatis:
+  mapper-locations: mappers/*.xml
+  type-aliases-package: cn.leyou.item.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+mapper:
+  wrap-keyword: "`{0}`"
