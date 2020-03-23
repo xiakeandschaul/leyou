@@ -5,10 +5,7 @@ import cn.leyou.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.CollectionUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -29,5 +26,18 @@ public class CategoryController {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(categories);
+    }
+
+    @PostMapping("/add")
+    public ResponseEntity<Void> addCategory(@RequestBody Category category) {
+        category.setId(null);
+        categoryService.addCategory(category);
+        return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("/delete")
+    public ResponseEntity<Void> deleteCategory(@RequestParam Long id) {
+        categoryService.deleteCategory(id);
+        return ResponseEntity.ok().build();
     }
 }

@@ -11,6 +11,7 @@ zuul:
   prefix: /api #路由前缀
   routes:
     item-service: /item/**
+    leyou-upload: /upload/**
 hystrix:
   command:
     default:

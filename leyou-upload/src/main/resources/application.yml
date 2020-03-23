@@ -1,0 +1,24 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: leyou-upload
+  servlet:
+    multipart:
+      max-file-size: 5MB
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    lease-expiration-duration-in-seconds: 10
+    lease-renewal-interval-in-seconds: 5
+ly:
+  oss:
+    host: http://ly-images-xiake.oss-cn-shanghai.aliyuncs.com
+    accessKey-id: LTAI4FpKY6Y7NdnNLLsWf9Vy
+    accessKeySecret: Imp9Yqh2MwpcBRIyjoyoWc94VhkDr9
+    endpoint: oss-cn-shanghai.aliyuncs.com
+    dir: ""
+    expireTime: 2000
+    maxFileSize: 5242880
