@@ -37,6 +37,7 @@
         <pageHelper.starter.version>1.2.3</pageHelper.starter.version>
         <leyou.latest.version>1.0.0-SNAPSHOT</leyou.latest.version>
         <fastDFS.client.version>1.26.1-RELEASE</fastDFS.client.version>
+        <tkmapper.version>1.1.5</tkmapper.version>
     </properties>
 
     <dependencyManagement>
@@ -74,10 +75,26 @@
                 <version>${mysql.version}</version>
             </dependency>
             <!--FastDFS客户端-->
+            <!-- https://mvnrepository.com/artifact/com.github.tobato/fastdfs-client -->
             <dependency>
                 <groupId>com.github.tobato</groupId>
                 <artifactId>fastdfs-client</artifactId>
                 <version>${fastDFS.client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-core</artifactId>
+                <version>${tkmapper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-base</artifactId>
+                <version>${tkmapper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-extra</artifactId>
+                <version>${tkmapper.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -90,6 +107,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>

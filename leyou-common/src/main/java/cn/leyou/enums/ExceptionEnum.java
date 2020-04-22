@@ -15,7 +15,11 @@ public enum ExceptionEnum {
     DATA_DELETE_ERROR(500, "数据删除失败"),
     IMAGE_UPLOAD_ERROR(500, "图片保存失败"),
     UPLOAD_IMAGE_FAIL(500, "图片上传失败"),
-    INVALID_FILE_TYPE(403, "图片格式不正确");
+    DATA_NOT_FOUND(204, "没有相应信息"),
+    DATA_UPLOAD_ERROR(500, "数据更新失败"),
+    INVALID_FILE_TYPE(403, "图片格式不正确"),
+    INVALID_PARAM_ERROR(400,"参数错误")
+    ;
     private int status;
     private String message;
 

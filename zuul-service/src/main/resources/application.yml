@@ -12,6 +12,7 @@ zuul:
   routes:
     item-service: /item/**
     leyou-upload: /upload/**
+    search-service: /search/**
 hystrix:
   command:
     default:

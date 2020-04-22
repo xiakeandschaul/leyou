@@ -16,8 +16,16 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
+    @GetMapping("/of/brand")
+    public ResponseEntity<List<Category>> queryCategoryByBrand(@RequestParam("id") Long bid) {
+        List<Category> categories = categoryService.queryCategoryByBrand(bid);
+        return ResponseEntity.ok(categories);
+    }
+
+
     @GetMapping("/of/parent")
     public ResponseEntity<List<Category>> queryCategoryByPId(@RequestParam(value = "pid") Long pid) {
+
         if (pid.longValue() < 0 || pid == null) {
             return ResponseEntity.badRequest().build();
         }
